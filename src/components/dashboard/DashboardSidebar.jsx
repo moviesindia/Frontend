@@ -10,7 +10,7 @@ const navItems = [
   { id: "settings", icon: "⚙️", label: "Settings" },
 ];
 
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 const DashboardSidebar = ({ activeTab, setActiveTab, sidebarOpen, setSidebarOpen }) => {
    const { logout } = useAuth();   // <-- get logout
