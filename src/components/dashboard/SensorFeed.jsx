@@ -48,7 +48,7 @@ const SensorFeed = ({ onManageSensors }) => {   // ← prop added
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const response = await fetch(`${import.meta.env.API_URL}/api/sensors/my-data`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/sensors/my-data`, {
         headers: { "Authorization": `Bearer ${token}` }
       });
 

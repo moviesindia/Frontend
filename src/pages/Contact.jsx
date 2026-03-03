@@ -67,7 +67,7 @@ const Contact = () => {
   e.preventDefault();
 
   try {
-    await axios.post(`${import.meta.env.API_URL}/api/contact`, {
+    await axios.post(`${import.meta.env.VITE_API_URL}/api/contact`, {
   name: form.name,
   email: form.email,
   role: form.role,
