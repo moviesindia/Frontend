@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext"; // adjust path if needed
+import logo from "../../assets/logo.png";
 
 const navItems = [
   { id: "sensor",   icon: "📡", label: "Live Sensor Feed" },
@@ -9,8 +10,6 @@ const navItems = [
   { id: "sensors",  icon: "🔧", label: "Manage Sensors" },
   { id: "settings", icon: "⚙️", label: "Settings" },
 ];
-
-import logo from "../../assets/logo.png";
 
 const DashboardSidebar = ({ activeTab, setActiveTab, sidebarOpen, setSidebarOpen }) => {
    const { logout } = useAuth();   // <-- get logout
