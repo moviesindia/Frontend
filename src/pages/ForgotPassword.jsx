@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { forgotPassword, verifyResetOtp, resetPassword } from "../services/api";
 import "../auth.css";
 import logo from "../assets/logo.png";
+import { Helmet } from "react-helmet-async";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
@@ -115,6 +116,10 @@ const ForgotPassword = () => {
 
   return (
     <div className="auth-page">
+      <Helmet>
+        <title>Forgot Password | AgriSense</title>
+        <meta name="description" content="Reset your AgriSense password if you've forgotten it." />
+      </Helmet>
       <div className="auth-form-panel" style={{ margin: "0 auto", maxWidth: "500px" }}>
         <div className="auth-form-inner">
           <Link to="/" className="auth-logo">

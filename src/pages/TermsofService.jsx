@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const sections = [
   {
@@ -217,6 +218,10 @@ export default function TermsOfService() {
 
   return (
     <>
+    <Helmet>
+        <title>Terms of Service | AgriSense</title>
+        <meta name="description" content="AgriSense Terms of Service. Learn about platform usage, IoT hardware responsibilities, and AI analysis guidelines." />
+      </Helmet>
       <Navbar />
       <div className="tos-root">
         {/* Hero */}

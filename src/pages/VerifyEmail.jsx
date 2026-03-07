@@ -3,6 +3,7 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import { verifyEmail, resendVerification } from "../services/api";
 import "../auth.css";
 import logo from "../assets/logo.png";
+import { Helmet } from "react-helmet-async";
 
 const VerifyEmail = () => {
   const location = useLocation();
@@ -62,6 +63,10 @@ const VerifyEmail = () => {
 
   return (
     <div className="auth-page">
+      <Helmet>
+        <title>Verify Email | AgriSense</title>
+        <meta name="description" content="Verify your email address to activate your AgriSense account." />
+      </Helmet>
       <div className="auth-form-panel" style={{ margin: "0 auto", maxWidth: "500px" }}>
         <div className="auth-form-inner">
           <Link to="/" className="auth-logo">

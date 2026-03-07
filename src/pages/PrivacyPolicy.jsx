@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const sections = [
   {
@@ -200,6 +201,10 @@ export default function PrivacyPolicy() {
 
   return (
     <>
+    <Helmet>
+        <title>Privacy Policy | AgriSense</title>
+        <meta name="description" content="Read the AgriSense Privacy Policy to understand how we secure your farm data, sensor readings, and account information." />
+      </Helmet>
       <Navbar />
       <div className="pp-root">
         {/* Hero */}

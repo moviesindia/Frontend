@@ -7,6 +7,7 @@ import logo from "../assets/logo.png";
 // import axios from "axios";
 // import { API_ENDPOINTS } from "../config/api";
 import { loginUser } from "../services/api";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -116,6 +117,10 @@ const userData = {
 
   return (
     <div className="auth-page">
+      <Helmet>
+        <title>Login | AgriSense</title>
+        <meta name="description" content="Log in to your AgriSense account to access your dashboard." />
+      </Helmet>
       {/* ── Left Panel: Form ── */}
       <div className="auth-form-panel">
         <div className="auth-form-inner">

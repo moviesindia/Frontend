@@ -7,6 +7,7 @@ import "../contact.css";
 // import axios from "axios";
 // import { API_ENDPOINTS } from "../config/api";
 import { sendContactMessage } from "../services/api";
+import { Helmet } from "react-helmet-async";
 
 const contactInfo = [
   {
@@ -111,6 +112,10 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="app-wrapper">
+      <Helmet>
+        <title>Contact AgriSense | Support & Expert Registration Indore</title>
+        <meta name="description" content="Get in touch with the AgriSense team in Indore. We are here to help farmers with IoT setup and onboard new agricultural experts." />
+      </Helmet>
       <Navbar />
       <main>
 

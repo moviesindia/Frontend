@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../about.css";
+import { Helmet } from "react-helmet-async";
 
 /* ── Data ── */
 const stats = [
@@ -105,6 +106,10 @@ const About = () => {
 
   return (
     <div className="app-wrapper">
+      <Helmet>
+        <title>About Us | The Kernel Crew & AgriSense</title>
+        <meta name="description" content="Learn how The Kernel Crew built AgriSense in Indore to bridge the technology gap in rural agriculture using IoT and expert analysis." />
+      </Helmet>
       <Navbar />
 
       <main>

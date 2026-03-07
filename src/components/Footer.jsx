@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Top Row */}
         <div className="footer-top">
           {/* Brand */}
-          <div className="footer-brand">
+          {/* <div className="footer-brand">
             <div className="footer-logo">
               <span className="logo-icon">🌱</span>
               <span className="logo-text">AgriSense</span>
@@ -15,6 +15,15 @@ const Footer = () => {
             <p className="footer-tagline">
               Empowering farmers with smart soil & seed analytics. Bridging IoT, AI,
               and expert knowledge for sustainable agriculture.
+            </p> */}
+            <div className="footer-brand">
+            <div className="footer-logo">
+              <span className="logo-icon">🌱</span>
+              <span className="logo-text">AgriSense</span>
+            </div>
+            <p className="footer-tagline">
+              Developed by The Kernel Crew at Medi-Caps University, Indore. 
+              Empowering farmers with smart soil & seed analytics through IoT and AI.
             </p>
             {/* Social Icons */}
             <div className="footer-socials">

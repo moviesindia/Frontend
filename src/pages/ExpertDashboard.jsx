@@ -9,6 +9,7 @@ import ExpertHistory from "../components/expert/ExpertHistory";
 import ExpertSettings from "../components/expert/ExpertSettings";
 import ExpertBroadcast from "../components/expert/ExpertBroadcast";
 import "../../expert-dashboard.css";
+import { Helmet } from "react-helmet-async";
 
 const ExpertDashboard = () => {
   const navigate = useNavigate();
@@ -58,6 +59,10 @@ const ExpertDashboard = () => {
 
   return (
     <div className={`exp-layout ${sidebarOpen ? "" : "exp-sidebar-collapsed"}`}>
+      <Helmet>
+        <title>Expert-Dashboard | AgriSense</title>
+        <meta name="description" content="AgriSense Expert Dashboard. Manage your review queue, view analysis history, and update your settings." />
+      </Helmet>
       <ExpertSidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}

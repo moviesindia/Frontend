@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 // import axios from "axios";
 // import { API_ENDPOINTS } from "../config/api";
 import { registerUser } from "../services/api";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -131,6 +132,10 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="auth-page auth-page-signup">
+      <Helmet>
+        <title>Sign Up | AgriSense</title>
+        <meta name="description" content="Create your free AgriSense account to access the platform dashboard" />
+      </Helmet>
       {/* ── Left Panel: Visual ── */}
       <div className="auth-visual-panel auth-visual-panel-left">
         <div className="auth-visual-glow auth-visual-glow-1"></div>

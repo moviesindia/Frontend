@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext"; // adjust path if needed
+import { Helmet } from "react-helmet-async";
 
 import DashboardSidebar  from "../components/dashboard/DashboardSidebar";
 import DashboardHeader   from "../components/dashboard/DashboardHeader";
@@ -51,6 +52,10 @@ const FarmerDashboard = () => {
 
   return (
     <div className={`dash-layout ${sidebarOpen ? "" : "dash-sidebar-collapsed"}`}>
+      <Helmet>
+        <title>Farmer-Dashboard | AgriSense</title>
+        <meta name="description" content="AgriSense Farmer Dashboard. Monitor your soil and crop health, upload analysis, and manage your IoT sensors." />
+      </Helmet>
       <DashboardSidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
